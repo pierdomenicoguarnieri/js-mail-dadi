@@ -15,24 +15,36 @@ const btn = document.getElementById("send");
 
 const emailMsg = document.getElementById("emailMsg");
 
-let flag = false;
+let message;
 
 btn.addEventListener("click", function(){
-  for(let i = 0; i < approvedEmail.length; i++){
 
-    if(!flag){
-      if((userEmail.value) === approvedEmail[i]){
-        emailMsg.classList.add("text-success");
-        emailMsg.classList.remove("d-none");
-        emailMsg.append("Email approvata!");
-        flag = true;
-      }else{
-        emailMsg.classList.add("text-danger");
-        emailMsg.classList.remove("d-none");
-        emailMsg.innerHTML = "Email non approvata."
-      }
-    }
-    
+  // Inizializzazione di flag
+  let flag = false;
+
+  // Reset delle classi
+  emailMsg.classList.remove("text-success", "text-danger");
+  emailMsg.classList.add("d-none");
+
+  // Ciclo for di controllo dell'email
+  for(let i = 0; i < approvedEmail.length && !flag; i++){
+
+    if((userEmail.value) === approvedEmail[i]) flag = true;
+
   }
+
+  // Assegnazione del messaggio e delle classi
+  if(flag){
+    emailMsg.classList.add("text-success");
+    emailMsg.classList.remove("d-none");
+    message = "Email approvata!";
+  }else{
+    emailMsg.classList.add("text-danger");
+    emailMsg.classList.remove("d-none");
+    message = "Email non approvata.";
+  }
+
+  // Reset del value e stampa del messaggio
   userEmail.value = "";
+  emailMsg.innerHTML = message;
 })
