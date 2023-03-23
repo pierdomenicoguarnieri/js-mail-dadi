@@ -1,8 +1,8 @@
 const approvedEmail = [
   "pierdo.guarnieri@gmail.com",
+  "pierdo.guarnieri@outlook.it",
   "stefano.corradi@gmail.com",
   "stefano.corradi@boolean.it",
-  "pierdo.guarnieri@outlook.it",
   "loris.barbiero@boolean.it",
   "loris.barbiero@gmail.com",
   "luca.giardina@boolean.it",

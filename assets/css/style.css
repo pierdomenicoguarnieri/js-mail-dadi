@@ -1,3 +1,52 @@
 body{
   background-color: darkslategrey;
 }
+
+.col > img{
+  background-color: rgba(47, 79, 79, 0.171);
+}
+
+.pg-result img{ 
+  left: 38%;
+  top: -30%;
+}
+
+.pg-opacity{
+  animation-name: opacity;
+  animation-iteration-count: 1;
+  animation-duration: 2.5s;
+  opacity: 1;
+}
+
+.rotate{
+  animation-name: rotation;
+  animation-iteration-count: 1;
+  animation-duration: 2.5s;
+  opacity: 0;
+}
+
+@keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

@@ -24,9 +24,44 @@
         <span id="emailMsg" class="fs-2 mb-5 d-none"></span>
       </div>
       
-      <div class="pg-game">
-        <div class="container px-5 rounded-3 bg-white py-5 mt-5 shadow text-center">
+      <div class="pg-game d-none">
+        <div class="container px-5 rounded-3 bg-white py-4 mt-5 shadow text-center">
           <h1>Benvenuto al gioco dei dadi!</h1>
+
+          <div class="row py-3 row-cols-3">
+            <div class="col">
+              <h2>Tu</h2>
+              <img class="rounded-circle object-fit-cover shadow w-50" src="assets/img/human.png" alt="">
+
+              <div class="pg-result position-relative mt-5">
+                <img class="w-25 loading position-absolute d-none" src="assets/img/loading.jpg" alt="">
+                <span id="diceHuman" class="fs-1 fw-bold"></span>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center">
+              <span id="symbolResult" class="fs-1 fw-bolder"></span>
+            </div>
+
+            <div class="col">
+              <h2>Computer</h2>
+              <img class="rounded-circle object-fit-cover shadow w-50" src="assets/img/ai.png" alt="">
+
+              <div class="pg-result mt-5 position-relative">
+                  <img class="w-25 loading position-absolute d-none" src="assets/img/loading.jpg" alt="">
+                
+                <span id="diceComputer" class="fs-1 fw-bold"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col d-flex flex-column">
+              <span id="resultMessage" class="pb-2 fs-4"></span>
+              <div class="pg-btn-container">
+                <button class="btn btn-primary" id="play">Gioca!</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
