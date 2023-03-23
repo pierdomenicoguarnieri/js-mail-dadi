@@ -108,3 +108,9 @@ gameBtn.addEventListener("click", function(){
     symbol = "=";
   }
 
+  outputHuman.innerHTML = diceNumberHuman;
+  outputComputer.innerHTML = diceNumberComputer;
+  resultMessage.innerHTML = messageGame;
+  symbolOutput.innerHTML = symbol;
+})
+
