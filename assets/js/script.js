@@ -31,6 +31,10 @@ const outputComputer = document.getElementById("diceComputer");
 
 let message;
 
+let messageGame;
+
+let symbol;
+
 btn.addEventListener("click", function(){
 
   // Inizializzazione di flag
