@@ -82,3 +82,6 @@ gameBtn.addEventListener("click", function(){
     loadingImg[i].classList.add("rotate");
   }
 
+  const diceNumberHuman = Math.floor(Math.random() * 6) + 1;
+  const diceNumberComputer = Math.floor(Math.random() * 6) + 1;
+
