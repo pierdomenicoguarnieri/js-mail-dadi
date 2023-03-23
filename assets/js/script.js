@@ -77,3 +77,8 @@ gameBtn.addEventListener("click", function(){
   resultMessage.classList.add("pg-opacity");
   symbolOutput.classList.add("pg-opacity");
 
+  for(let i = 0; i < loadingImg.length; i++){
+    loadingImg[i].classList.remove("d-none");
+    loadingImg[i].classList.add("rotate");
+  }
+
