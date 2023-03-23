@@ -85,3 +85,26 @@ gameBtn.addEventListener("click", function(){
   const diceNumberHuman = Math.floor(Math.random() * 6) + 1;
   const diceNumberComputer = Math.floor(Math.random() * 6) + 1;
 
+  if(diceNumberHuman > diceNumberComputer){
+    resultMessage.classList.add("text-success");
+    resultMessage.classList.remove("d-none");
+    messageGame = "Hai vinto!"; 
+    symbolOutput.classList.add("text-success");
+    symbolOutput.classList.remove("d-none");
+    symbol = ">";
+  }else if(diceNumberHuman < diceNumberComputer){
+    resultMessage.classList.add("text-danger");
+    resultMessage.classList.remove("d-none");
+    messageGame = "Hai perso.";
+    symbolOutput.classList.add("text-danger");
+    symbolOutput.classList.remove("d-none");
+    symbol = "<";
+  }else{
+    resultMessage.classList.add("text-warning");
+    resultMessage.classList.remove("d-none");
+    messageGame = "Hai pareggiato.";
+    symbolOutput.classList.add("text-warning");
+    symbolOutput.classList.remove("d-none");
+    symbol = "=";
+  }
+
