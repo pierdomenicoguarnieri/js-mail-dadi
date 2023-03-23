@@ -13,6 +13,8 @@ const userEmail = document.getElementById("email");
 
 const btn = document.getElementById("send");
 
+const emailMsg = document.getElementById("emailMsg");
+
 let flag = false;
 
 btn.addEventListener("click", function(){
@@ -20,12 +22,17 @@ btn.addEventListener("click", function(){
 
     if(!flag){
       if((userEmail.value) === approvedEmail[i]){
-      console.log("Email approvata");
-      flag = true;
+        emailMsg.classList.add("text-success");
+        emailMsg.classList.remove("d-none");
+        emailMsg.append("Email approvata!");
+        flag = true;
       }else{
-        console.log("Email non approvata");
+        emailMsg.classList.add("text-danger");
+        emailMsg.classList.remove("d-none");
+        emailMsg.innerHTML = "Email non approvata."
       }
     }
     
   }
+  userEmail.value = "";
 })
