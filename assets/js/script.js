@@ -15,6 +15,20 @@ const btn = document.getElementById("send");
 
 const emailMsg = document.getElementById("emailMsg");
 
+const gameShow = document.querySelector(".pg-game");
+
+const gameBtn = document.getElementById("play");
+
+const resultMessage = document.getElementById("resultMessage");
+
+const loadingImg = document.querySelectorAll(".loading");
+
+const symbolOutput = document.getElementById("symbolResult");
+
+const outputHuman = document.getElementById("diceHuman");
+
+const outputComputer = document.getElementById("diceComputer");
+
 let message;
 
 btn.addEventListener("click", function(){
@@ -37,6 +51,7 @@ btn.addEventListener("click", function(){
   if(flag){
     emailMsg.classList.add("text-success");
     emailMsg.classList.remove("d-none");
+    gameShow.classList.remove("d-none")
     message = "Email approvata!";
   }else{
     emailMsg.classList.add("text-danger");
@@ -48,3 +63,13 @@ btn.addEventListener("click", function(){
   userEmail.value = "";
   emailMsg.innerHTML = message;
 })
+
+gameBtn.addEventListener("click", function(){
+  resultMessage.classList.remove("text-success", "text-danger", "text-warning");
+  resultMessage.classList.add("d-none");
+  symbolOutput.classList.remove("text-success", "text-danger", "text-warning");
+  symbolOutput.classList.add("d-none");
+
+  resultMessage.classList.add("pg-opacity");
+  symbolOutput.classList.add("pg-opacity");
+
