@@ -15,6 +15,8 @@ const btn = document.getElementById("send");
 
 const emailMsg = document.getElementById("emailMsg");
 
+const mainWrapper = document.querySelector(".pg-main-wrapper");
+
 const gameShow = document.querySelector(".pg-game");
 
 const gameBtn = document.getElementById("play");
@@ -60,7 +62,8 @@ btn.addEventListener("click", function(){
   }else{
     emailMsg.classList.add("text-danger");
     emailMsg.classList.remove("d-none");
-    message = "Email non approvata.";
+    mainWrapper.classList.add("pg-fadeoff-slow");
+    message = "Email non approvata. Il sito scomparirà a breve.";
   }
 
   // Reset del value e stampa del messaggio
@@ -113,4 +116,3 @@ gameBtn.addEventListener("click", function(){
   resultMessage.innerHTML = messageGame;
   symbolOutput.innerHTML = symbol;
 })
-

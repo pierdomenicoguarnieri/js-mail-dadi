@@ -18,6 +18,13 @@ body{
   opacity: 1;
 }
 
+.pg-fadeoff-slow{
+  animation-name: fadeoff;
+  animation-iteration-count: 1;
+  animation-duration: 7s;
+  opacity: 0;
+}
+
 .rotate{
   animation-name: rotation;
   animation-iteration-count: 1;
@@ -48,5 +55,14 @@ body{
   }
   100%{
     opacity: 1;
+  }
+}
+
+@keyframes fadeoff{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }
