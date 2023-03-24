@@ -1,4 +1,4 @@
-const approvedEmail = [
+const approvedEmails = [
   "pierdo.guarnieri@gmail.com",
   "pierdo.guarnieri@outlook.it",
   "stefano.corradi@gmail.com",
@@ -49,9 +49,9 @@ btn.addEventListener("click", function(){
   emailMsg.classList.add("d-none");
 
   // Ciclo for di controllo dell'email
-  for(let i = 0; i < approvedEmail.length && !flag; i++){
+  for(let i = 0; i < approvedEmails.length && !flag; i++){
 
-    if((userEmail.value) === approvedEmail[i]) flag = true;
+    if((userEmail.value) === approvedEmails[i]) flag = true;
 
   }
 
