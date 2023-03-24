@@ -47,5 +47,8 @@ Steps da seguire per il secondo esercizio:
 
 4. Stampare a schermo il risultato del gioco.
 
-## References
+## Extras
 
+1. Ho aggiunto la parte grafica del sito.
+
+2. Ho aggiunto diverse classi per la gestione delle animazioni (come ad esempio l'immagine di caricamento, l'entrata in dissolvenza del testo, la scomparsa del sito quando viene inserita un'email errata).
