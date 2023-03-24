@@ -15,6 +15,7 @@ const btn = document.getElementById("send");
 
 const emailMsg = document.getElementById("emailMsg");
 
+// Salvo il nodo del Main Wrapper per gestire le sue classi; in caso di inserimento di una email sbagliata verrà aggiunta una classe che farà scomparire l'intera pagina.
 const mainWrapper = document.querySelector(".pg-main-wrapper");
 
 const gameShow = document.querySelector(".pg-game");
@@ -23,6 +24,7 @@ const gameBtn = document.getElementById("play");
 
 const resultMessage = document.getElementById("resultMessage");
 
+// Salvo il nodo delle immagini per gestire le classi che applicano le animazioni
 const loadingImg = document.querySelectorAll(".loading");
 
 const symbolOutput = document.getElementById("symbolResult");
@@ -72,22 +74,28 @@ btn.addEventListener("click", function(){
 })
 
 gameBtn.addEventListener("click", function(){
+
+  // Reset delle classi dei testi di output
   resultMessage.classList.remove("text-success", "text-danger", "text-warning");
   resultMessage.classList.add("d-none");
   symbolOutput.classList.remove("text-success", "text-danger", "text-warning");
   symbolOutput.classList.add("d-none");
 
+  // Reset delle classi dei testi di output
   resultMessage.classList.add("pg-opacity");
   symbolOutput.classList.add("pg-opacity");
 
+  // Aggiunta delle classi per gestire le animazioni a tutte le immagini
   for(let i = 0; i < loadingImg.length; i++){
     loadingImg[i].classList.remove("d-none");
     loadingImg[i].classList.add("rotate");
   }
 
+  // Generazione dei numeri random
   const diceNumberHuman = Math.floor(Math.random() * 6) + 1;
   const diceNumberComputer = Math.floor(Math.random() * 6) + 1;
 
+  // Calcolo del risultato del gioco
   if(diceNumberHuman > diceNumberComputer){
     resultMessage.classList.add("text-success");
     resultMessage.classList.remove("d-none");
@@ -111,6 +119,7 @@ gameBtn.addEventListener("click", function(){
     symbol = "=";
   }
 
+  // Stampa dei risultati
   outputHuman.innerHTML = diceNumberHuman;
   outputComputer.innerHTML = diceNumberComputer;
   resultMessage.innerHTML = messageGame;
